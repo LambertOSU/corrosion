@@ -1,4 +1,4 @@
-# Weathering Simulations
+# Corrosion Simulations
 
 This repository contains a collection of corrosion simulations.
 
