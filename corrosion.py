@@ -14,7 +14,7 @@ class zinc_plate:
         self.insoluble_products = [0]           # micrometers
         self.effluent_volume = [0]              # liters
         self.effluent_concentration = [0]       # grams/liter
-        self.corrosion_rate_k = 0.0002        # 1/(RH*Hr)
+        self.corrosion_rate_k = 0.0002          # 1/(RH*Hr)
         self.rain_reaction_rate_k = 0.00000005  #
         self.runoff_rate_k = 1                  # 1/(mm*Hr)
         self.time_domain =[]                    # datetime
@@ -98,26 +98,5 @@ class weather:
         self.temp.append(T)                # Temperature
         self.RH.append(Rhum)               # Relative Humidity
         self.precip.append(rain*25.4)      # Precipitation convert to mm
-
-#######################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #######################################################
