@@ -5,7 +5,7 @@
 class zinc_plate:
 
     # This is a virtual zinc plate for comparitive corrosion experiments.
-    # It is 1.0 square meter in area and 1 mm (10000 micrometers) thick.
+    # It is 1.0 square meter in area and 1 mm (1000 micrometers) thick.
 
     def __init__(self):
 
