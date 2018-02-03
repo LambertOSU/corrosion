@@ -2,20 +2,20 @@
 
 
 #######################################################
-class zinc_plate:
+class metal_plate:
 
-    # This is a virtual zinc plate for comparitive corrosion experiments.
+    # This is a virtual metal plate for comparitive corrosion experiments.
     # It is 1.0 square meter in area and 1 mm (1000 micrometers) thick.
 
     def __init__(self):
 
-        self.thickness = [1000.0]               # micrometers
+        self.thickness = [1000]                 # micrometers
         self.soluble_products = [0]             # micrometers
         self.insoluble_products = [0]           # micrometers
         self.effluent_volume = [0]              # liters
         self.effluent_concentration = [0]       # grams/liter
-        self.corrosion_rate_k = 0.0002          # 1/(RH*Hr)
-        self.rain_reaction_rate_k = 0.00000005  #
+        self.corrosion_rate_k = None            # 1/(RH*Hr)
+        self.rain_reaction_rate_k = None        #
         self.runoff_rate_k = 1                  # 1/(mm*Hr)
         self.time_domain =[]                    # datetime
 
@@ -76,6 +76,16 @@ class zinc_plate:
             self.effluent_concentration.append(0)
             self.effluent_volume.append(0)
 #######################################################
+#######################################################
+class zinc_plate(metal_plate):
+
+# This metal_plate has properties consistent with zinc.
+
+    def __init__(self):
+        metal_plate.__init__(self)
+        self.corrosion_rate_k = 0.0002          # 1/(RH*Hr)
+        self.rain_reaction_rate_k = 0.00000005  #
+        self.runoff_rate_k = 1                  # 1/(mm*Hr)
 
 
 #######################################################
